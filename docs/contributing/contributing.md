@@ -15,7 +15,7 @@ Clone the repository:
 $ git clone https://github.com/haskell/haskell-language-server
 ```
 
-#### Note for contributors using WSL (Windows Subsystem for Linux)
+### Note for contributors using WSL (Windows Subsystem for Linux)
 
 When building HLS in WSL, clone and build the repository from the Linux filesystem (e.g. `~/dev`), not from Windows-mounted paths like `/mnt/c`, as this can cause permission or build issues.
 

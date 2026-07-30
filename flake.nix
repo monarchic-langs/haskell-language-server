@@ -148,6 +148,15 @@
           default = pkgs.haskell-language-server;
           haskell-language-server = pkgs.haskell-language-server;
         };
+
+        checks = {
+          inherit docs;
+          package = pkgs.haskell-language-server;
+          smoke = pkgs.runCommand "hls-smoke" { nativeBuildInputs = [ pkgs.haskell-language-server ]; } ''
+            command -v haskell-language-server-wrapper
+            touch $out
+          '';
+        };
       });
 
   nixConfig = {

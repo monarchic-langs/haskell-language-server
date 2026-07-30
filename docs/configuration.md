@@ -493,14 +493,14 @@ dotspacemacs-configuration-layers
 
 1. Grab a copy of [kak-lsp](https://github.com/kakoune-lsp/kakoune-lsp), and add the following to your `kakrc`:
 
-```kak
+```text
 evaluate-commands %sh{kak-lsp}
 lsp-enable
 ```
 
 2. The LSP should start automatically when editing any Haskell file. To override the default settings, you may add the following to your `kakrc` at any point after the previous snippet:
 
-```kak
+```text
 remove-hooks global lsp-filetype-haskell
 hook -group lsp-filetype-haskell global BufSetOption filetype=haskell %{
     set-option buffer lsp_servers %{
